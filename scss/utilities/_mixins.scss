@@ -29,7 +29,7 @@
 }
 
 //Flex Container - Settings
-@mixin flexbox($f-direction: row, $f-wrap: no-wrap)    {
+@mixin flexbox($f-direction: row, $f-wrap: nowrap)    {
     display: flex;
     flex-direction: $f-direction;
     flex-wrap: $f-wrap;

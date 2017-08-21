@@ -3,7 +3,7 @@
 	@extend %center-align;
 	
 	.headline--secondary	{
-		margin: 1.33em 0;
+		margin-bottom: 20px;
 	}
 	
 	@include e(label) {
