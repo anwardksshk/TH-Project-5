@@ -16,8 +16,6 @@
 }
 
 .card	{
-	height: 100%;
-	
 	&.intro	{
 		@include mq('desktop')	{
 			padding-right: 30%;

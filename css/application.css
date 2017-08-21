@@ -505,11 +505,9 @@ textarea {
 button {
   outline: 0; }
 
-.card {
-  height: 100%; }
-  @media (min-width: 769px) {
-    .card.intro {
-      padding-right: 30%; } }
+@media (min-width: 769px) {
+  .card.intro {
+    padding-right: 30%; } }
 
 @media (min-width: 769px) {
   .nav {
@@ -582,7 +580,7 @@ button {
   display: flex;
   flex-direction: column;
   flex-wrap: no-wrap;
-  justify-content: center;
+  justify-content: stretch;
   align-self: stretch;
   margin-top: 0.25em;
   margin-bottom: 0.25em;

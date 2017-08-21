@@ -42,7 +42,7 @@
 //Column Styles
 [class^="grid__col--"] {
 	@include flexbox(column)	{
-		justify-content: center;
+		justify-content: stretch;
 	};
 	align-self: stretch;
 	margin-top: em(4px);
