@@ -12,6 +12,11 @@
 		}
 	}
 	@include e(input) {
+		display: block;
+    	padding: 10px;
+    	width: 100%;
+    	outline: 0;
+    	border: 0;
 		color: palette(grey, $shade: 'light');
 		font-size: 14px;
 		margin-bottom: em(12px, 14px);

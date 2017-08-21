@@ -1,6 +1,7 @@
 //Headlines
 %hdl-prim {
     color: palette(turquoise-blue,x-dark);
+	font-family: $font-family--primary;
     font-weight: $font-weight--bold;
     font-size: em(38px);
     line-height: 1.5;
@@ -8,9 +9,10 @@
 %hdl-sec {
     color: palette(grey, light);
     letter-spacing: $letter-spacing;
-    font-weight: $font-weight--thin;
-    font-size: em(32px);
     font-family: $font-family--secondary;
+	font-size: em(20px);
+    font-weight: $font-weight--light;
+    text-transform: capitalize;
 }
 
 //Anchor Link 

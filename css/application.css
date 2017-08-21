@@ -463,47 +463,16 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5; }
 
-h3 {
-  font-size: 1.75em;
-  font-weight: 400; }
-
-h4, legend {
-  font-size: 1.25em;
-  font-weight: 200;
-  text-transform: capitalize; }
-
 p {
   margin: 0;
   font-weight: 200;
   font-size: 1.125em;
   line-height: 1.5; }
 
-blockquote {
-  font-weight: 700;
-  font-style: italic;
-  font-size: 1em;
-  padding: 0 0 0 5%; }
-
-ul,
-li {
+ul {
   list-style: none;
   margin: 0;
   padding: 0; }
-
-img {
-  max-width: 100%;
-  height: auto; }
-
-input,
-textarea {
-  display: block;
-  padding: 10px;
-  width: 100%;
-  outline: 0;
-  border: 0; }
-
-button {
-  outline: 0; }
 
 @media (min-width: 769px) {
   .card.intro {
@@ -629,6 +598,7 @@ button {
 
 [class^="btn--"] {
   font-size: 16px;
+  outline: 0;
   margin-bottom: 0.75em; }
   @media (max-width: 769px) {
     [class^="btn--"] {
@@ -645,6 +615,11 @@ button {
 .form__label--hidden {
   display: none; }
 .form__input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  outline: 0;
+  border: 0;
   color: #999da1;
   font-size: 14px;
   margin-bottom: 0.85714em;
@@ -683,6 +658,10 @@ button {
     float: left; } }
 
 .blockquote {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1em;
+  padding: 0 0 0 5%;
   border-left: 0.4em solid #3ce9bb;
   border-top-left-radius: 15px; }
   @media (min-width: 769px) {
@@ -706,20 +685,22 @@ button {
     .headline--secondary {
       font-size: 16px; } }
 
-h1 {
+.headline--primary {
   color: #1ae3ae;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 2.375em;
   line-height: 1.5; }
 
-h2 {
+.headline--secondary {
   color: #999da1;
   letter-spacing: 1px;
-  font-weight: 100;
-  font-size: 2em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  font-weight: 200;
+  text-transform: capitalize; }
 
-a {
+.link {
   color: #47DDFE;
   text-decoration: none;
   font-weight: 400; }

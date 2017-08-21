@@ -8,7 +8,7 @@
     @extend %center-align;
     @extend %btn;
     font-size: 16px;
-	
+	 outline: 0;
     margin-bottom	: em(12px); 
     
     @include mq('mobile') {

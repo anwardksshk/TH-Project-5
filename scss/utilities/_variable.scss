@@ -10,12 +10,10 @@ $font-weight--thin      : 100;
 $font-weight--light     : 200;
 $font-weight--regular   : 400;
 $font-weight--bold      : 700;
-$font-weight--ultra-bold: 900;
 
 //Descriptive Base Colors
 
 $white  :   #fff;
-$black  :   #0b0b0b;
 $grey   :   #797e83;
 
 $turquoise-blue     : #61EDC8;
@@ -84,7 +82,7 @@ $letter-spacing     : 1px ;
 //Border radius
 
 $border-radius--def     :   .4em;
-$border-radius--round   :   50%;
+
 
 //Path to Assets
 
@@ -92,12 +90,8 @@ $path--rel      : "../images";
 
 //Grid Column
 $g-col-count    : 12;
-$g-col-width    : 8.265;
-
 $g-gutter-width : 0.3;
-$g-cont-max-w   : 1050px;
 
 
 //Breakpoints
-$bp-s    : 1px;
 $bp-m    : 769px;
