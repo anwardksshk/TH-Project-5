@@ -10,7 +10,7 @@
 	}
 	
 	@include m(secondary)	{
-		 @extend %hdl-sec;
+		@extend %hdl-sec;
 		margin-bottom: 12px;
 		@include mq('mobile')	{
 			font-size: 16px;
