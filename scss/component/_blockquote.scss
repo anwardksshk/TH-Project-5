@@ -1,0 +1,7 @@
+.blockquote	{
+	border-left: em(8px, 20px) solid palette(turquoise-blue, dark); 
+    border-top-left-radius: 15px;
+	@include mq('desktop')	{
+		margin-top: em(30px,16px);
+	}
+}

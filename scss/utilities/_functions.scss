@@ -1,0 +1,15 @@
+// Import if Google Fonts URL is defined
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+//Calcualte em values (px to em)
+@function em($target, $context: $base__font-size) {
+	@return ($target / $context) * 1em;
+}
+
+//Palette Map Selector Function
+
+@function palette($palette, $shade: 'base') {
+    @return map-get(map-get($color-palettes,$palette),$shade);
+}

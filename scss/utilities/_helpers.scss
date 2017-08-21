@@ -1,0 +1,19 @@
+// Center alignment
+%center-align {
+	text-align: center;
+}
+
+// Center elements
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//Clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

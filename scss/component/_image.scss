@@ -1,0 +1,26 @@
+.img	{
+	@extend %img;
+	@include m(frame)	{
+		@extend %img;
+		align-self: center;
+	}
+	
+	@include m(avatar)	{
+		@extend %img;
+		align-self: center;
+	}
+	
+}
+
+.site-logo	{
+	@include mq('mobile')	{
+		width: 35%;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+	@include mq('desktop')	{
+		width: 50%;
+		float: left;
+	}
+	
+}

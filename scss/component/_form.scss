@@ -1,0 +1,47 @@
+
+.form {
+	@extend %center-align;
+	
+	.headline--secondary	{
+		margin: 1.33em 0;
+	}
+	
+	@include e(label) {
+		@include m(hidden) {
+			display:none;
+		}
+	}
+	@include e(input) {
+		color: palette(grey, $shade: 'light');
+		font-size: 14px;
+		margin-bottom: em(12px, 14px);
+		padding: em(12px, 14px);
+		border-bottom: 6px solid palette(turquoise-blue, base);
+    	border-radius: 5px;
+		&:focus	{
+			border-bottom-color: palette(turquoise-blue, x-dark);
+		}
+		
+		@include mq('desktop')	{
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	
+	[class^="btn--"]	{
+		margin-top: em(16px);
+		@include mq('desktop')	{
+			width: 40%;	
+		}
+	}
+	
+	.img {
+		@include m(avatar)	{
+			max-width: 40%;
+			margin-bottom: 18px;
+		}
+	}
+}
+
+

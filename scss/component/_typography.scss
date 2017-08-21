@@ -1,0 +1,19 @@
+.headline	{
+	@include m(primary)	{
+		margin-top: 0;
+		margin-bottom: 12px;
+		@include mq('mobile')	{
+			margin-left: 20px;
+			font-size: 28px;
+		}
+	}
+	
+	@include m(secondary)	{
+		margin-bottom: 12px;
+		@include mq('mobile')	{
+			font-size: 16px;
+		}
+	}
+	
+	
+}

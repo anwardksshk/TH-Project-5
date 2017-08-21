@@ -1,0 +1,26 @@
+// ==========================================================================
+// Panels
+// ==========================================================================
+
+.panel { //give top and bottom padding property
+    @extend %panel-default;
+    
+    @include m(padded)    {
+        @extend %panel-padding;
+        
+        @include m(centered)  {
+            @extend %center-align; //textalign to center
+			@extend %panel-padding;
+        }
+    }
+}
+
+.card	{
+	height: 100%;
+	
+	&.intro	{
+		@include mq('desktop')	{
+			padding-right: 30%;
+		}
+	}
+}

@@ -1,0 +1,86 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+*   {
+    box-sizing: border-box;
+}
+
+body    {
+    color: $grey;
+    font-size: $base__font-size;
+    font-family:    $font-family--primary;
+    line-height: ($base__line-height/$base__font-size);
+}
+
+//Text
+
+h1  {
+    @extend %hdl-prim;
+}
+
+h2  {
+    @extend %hdl-sec;
+}
+
+h3  {
+    font-size: em(28px);
+    font-weight: $font-weight--regular;
+}
+
+h4, legend  {
+    font-size: em(20px);
+    font-weight: $font-weight--light;
+    text-transform: capitalize;
+}
+
+a   {
+	@extend %links;
+}
+
+p   {
+   	margin: 0;
+	font-weight: $font-weight--light;
+	font-size: em(18px);
+	line-height: (27px/18px);//1.5
+}
+
+blockquote  {
+    font-weight: $font-weight--bold;
+	font-style : italic;
+	font-size : em(16px);
+    padding: 0 0 0 5%;
+}
+
+//List
+
+ul,
+li  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+//Images
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+//Form Elements
+
+input,
+textarea    {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    outline: 0;
+    border: 0;
+}
+
+// Button
+
+button {
+    outline: 0;
+}

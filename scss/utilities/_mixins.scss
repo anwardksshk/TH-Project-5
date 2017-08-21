@@ -1,0 +1,65 @@
+// Media queries
+@mixin mq($break) {
+  @if $break == "mobile" {
+    @media (max-width: $bp-m) {
+      @content;
+    }
+  }
+  @else if $break == "desktop" {
+    @media (min-width: $bp-m) {
+      @content;
+    }
+  }
+  @else {
+    @error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+}
+
+// BEM selectors
+
+@mixin e($element) {
+	&__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+//Flex Container - Settings
+@mixin flexbox($f-direction: row, $f-wrap: no-wrap)    {
+    display: flex;
+    flex-direction: $f-direction;
+    flex-wrap: $f-wrap;
+    @content;
+}
+
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1%) {
+	& + & {
+	  margin-left: $margin;
+    @content;
+	}
+}
+
+// Generate modifier color classes
+@mixin button-colors($map) {
+	@each $theme, $color in $map {
+		&--#{$theme} {
+			background-color: $color;    
+		}
+	}
+}
+
+@mixin grid-colors($map) {
+  @each $theme, $color in $map {
+    &.grid__#{$theme} {
+      background-color: $color;
+    }
+  }
+}
+
+

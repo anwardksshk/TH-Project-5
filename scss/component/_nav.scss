@@ -1,0 +1,40 @@
+.nav	{
+	@include mq('desktop')	{
+		@include flexbox()	{
+			justify-content: flex-end;
+			align-content: center;
+		};
+	}
+	
+	@include e(items)	{
+		@include mq('mobile')	{
+			margin: 20px;
+		}
+		
+		@include mq('desktop')	{
+			margin-left: 12px;
+		}
+		
+		@include e(links) {
+			
+			
+			@extend %nav_items_links;
+
+			@include mq('mobile')	{
+				padding: 10px 20px;
+			}
+			@include mq('desktop')	{
+				padding: 10px;
+			}
+
+			&:hover	{
+				@extend %nav_items_active;
+			}
+		}
+		
+	}
+}
+
+.selected	{
+	@extend %nav_items_active;
+}

@@ -1,0 +1,77 @@
+.container  {
+    @extend .centered;
+    @include flexbox(column);
+    width: 85%;
+}
+
+.grid {
+    
+    @include e(row) {
+		margin-bottom: em(12px);
+        @include flexbox(column)    {
+           align-items: center;
+        };
+		@include mq('mobile') {
+			margin-bottom: em(30px);
+		}
+        @include mq('desktop') {
+			@include flexbox($f-direction: row)	{
+				justify-content: space-between;
+			};
+        }
+    }
+	
+	@include e(col){
+		@include mq('desktop')	{
+			@for $i from 1 through ($g-col-count)-1 {
+				$context: (100) - ($g-gutter-width * ($g-col-count - 1)); //100 represents the 100% of the max-width an element can contain its parent
+				
+				&--#{$i}{
+      				flex-basis:percentage((($context/$g-col-count) * $i)/100); 
+    			}
+			}
+			
+			&--#{$g-col-count}	{
+				flex-basis: 100%;
+			}
+		}
+    }
+    
+}
+	
+//Column Styles
+[class^="grid__col--"] {
+	@include flexbox(column)	{
+		justify-content: center;
+	};
+	align-self: stretch;
+	margin-top: em(4px);
+	margin-bottom: em(4px);
+	padding: em(10px);
+    
+    @include mq('desktop') {
+        border-radius: 8px;
+    } 
+}
+
+.grid__col--	{
+	
+	&12	{
+		@include mq('desktop'){
+			@include flexbox(row)	{
+				justify-content: flex-start;
+			};
+		}
+	}
+	
+	&7	{
+		@include mq('mobile'){
+			width: 100%;
+		}
+	}
+}
+
+.theme__colors	{
+	color: $white;
+  	@include grid-colors($grid-colors);
+}
