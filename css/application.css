@@ -575,10 +575,18 @@ ul {
   .nav__items {
     margin-left: 12px; } }
 @media (max-width: 769px) {
-  .nav__items__links {
+  .nav__items [href="#type"],
+  .nav__items [href="#buttons"],
+  .nav__items [href="#forms"],
+  .nav__items [href="#images"],
+  .nav__items [href="#grid"] {
     padding: 10px 20px; } }
 @media (min-width: 769px) {
-  .nav__items__links {
+  .nav__items [href="#type"],
+  .nav__items [href="#buttons"],
+  .nav__items [href="#forms"],
+  .nav__items [href="#images"],
+  .nav__items [href="#grid"] {
     padding: 10px; } }
 
 @media (min-width: 769px) {
@@ -684,17 +692,29 @@ ul {
   text-transform: capitalize;
   margin-top: 0; }
 
-.link {
+.nav__items [href="#type"],
+.nav__items [href="#buttons"],
+.nav__items [href="#forms"],
+.nav__items [href="#images"],
+.nav__items [href="#grid"], .link {
   color: #47DDFE;
   text-decoration: none;
   font-weight: 400; }
 
-.nav__items__links {
+.nav__items [href="#type"],
+.nav__items [href="#buttons"],
+.nav__items [href="#forms"],
+.nav__items [href="#images"],
+.nav__items [href="#grid"] {
   color: #797e83;
   font-weight: 200;
   border-radius: 0.4em; }
 
-.nav__items__links:hover, .selected {
+.nav__items [href="#type"]:hover,
+.nav__items [href="#buttons"]:hover,
+.nav__items [href="#forms"]:hover,
+.nav__items [href="#images"]:hover,
+.nav__items [href="#grid"]:hover, .nav__items [href="#type"] {
   color: #fff;
   background-color: #61EDC8; }
 

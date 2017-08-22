@@ -15,9 +15,12 @@
 			margin-left: 12px;
 		}
 		
-		@include e(links) {
-			
-			
+		[href="#type"],
+		[href="#buttons"],
+		[href="#forms"],
+		[href="#images"],
+		[href="#grid"] 		{
+			@extend %links;
 			@extend %nav_items_links;
 
 			@include mq('mobile')	{
@@ -32,11 +35,12 @@
 			}
 		}
 		
-	}
-}
+		[href="#type"]	{ //for the current page.
+			@extend %nav_items_active;
+		}
 
-.selected	{
-	@extend %nav_items_active;
+		
+	}
 }
 
 .grid__col--9 .centered	{ //for navigation
