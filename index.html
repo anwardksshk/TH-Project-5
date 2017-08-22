@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<HTML>
+<HTML lang="en">
     <head>
         <meta charset="utf-8">
         <title>Circles UI Kit</title>
@@ -7,27 +7,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body class="container">
-        
-        <div class="grid__row panel--padded--centered">
+        <div class="grid__row">
 				<div class="grid__col--3">
-					<a href="/">
-					  <img class="site-logo" alt="circles logo" src="images/logo.png">
+					<a class="link" href="/">
+					  <img class="img--logo" alt="circles logo" src="images/logo.png">
 					</a>
 				</div>
 				<div class="grid__col--9">
-                  <ul class="nav">
-                    <li class="nav__items"><a class="nav__items__links selected link" href="#type">Typography</a></li>
-                    <li class="nav__items"><a class="nav__items__links link" href="#buttons">Buttons</a></li>
-                    <li class="nav__items"><a class="nav__items__links link" href="#forms">Form</a></li>
-                    <li class="nav__items"><a class="nav__items__links link" href="#images">Images</a></li>
-                    <li class="nav__items"><a class="nav__items__links link" href="#grid">Grid</a></li>
-                  </ul>
+					<nav class="centered" role="navigation">
+					  <ul class="nav">
+						<li class="nav__items"><a class="nav__items__links selected link" href="#type">Typography</a></li>
+						<li class="nav__items"><a class="nav__items__links link" href="#buttons">Buttons</a></li>
+						<li class="nav__items"><a class="nav__items__links link" href="#forms">Form</a></li>
+						<li class="nav__items"><a class="nav__items__links link" href="#images">Images</a></li>
+						<li class="nav__items"><a class="nav__items__links link" href="#grid">Grid</a></li>
+					  </ul>
+					</nav>
 				</div>
         </div>
         
         <div class="grid__row">
             <div class="grid__col--12">
-                <div class="card intro">
+                <div class="card"> 
                   <p>This is what the navigation menu looks like when the screen is at 769px or higher. When the screen is less than 769px, the menu will be displayed vertically.</p>
                 </div>
             </div>
@@ -45,7 +46,7 @@
           </div>
 			
           <div class="grid__col--4">
-			<div class="card">
+			
 				<form class="form">
 				  <legend id="forms" class="headline--secondary">Form Elements</legend>
 				  <img class="img--avatar" src="images/avatar.png" alt="Avatar">
@@ -55,7 +56,7 @@
 				  <input class="form__input" type="password" id="password" placeholder="Your super secret code">
 				  <button class="btn--default theme__colors" type="submit" value="Login">Login</button>
 				</form>
-			  </div>
+			 
           </div>
         </div>
         
@@ -113,9 +114,5 @@
         <div class="grid__row">
           <div class="grid__col--7 theme__colors centered">.centered .grid__col--7</div>
         </div>
-        
-		<footer class="footer">
-			<div></div>
-		</footer>
     </body>
 </HTML>

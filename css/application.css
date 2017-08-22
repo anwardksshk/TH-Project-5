@@ -1,8 +1,8 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
-.panel--padded--centered, [class^="btn--"], .form {
+[class^="btn--"], .form {
   text-align: center; }
 
-.centered, .container, .img, .img--frame, .img--avatar {
+.centered, .container, .img, .img--frame, .img--avatar, .img--logo {
   margin-left: auto;
   margin-right: auto; }
 
@@ -474,30 +474,6 @@ ul {
   margin: 0;
   padding: 0; }
 
-@media (min-width: 769px) {
-  .card.intro {
-    padding-right: 30%; } }
-
-@media (min-width: 769px) {
-  .nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-content: center; } }
-@media (max-width: 769px) {
-  .nav__items {
-    margin: 20px; } }
-@media (min-width: 769px) {
-  .nav__items {
-    margin-left: 12px; } }
-@media (max-width: 769px) {
-  .nav__items__links {
-    padding: 10px 20px; } }
-@media (min-width: 769px) {
-  .nav__items__links {
-    padding: 10px; } }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -508,8 +484,7 @@ ul {
   margin-bottom: 0.75em;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center; }
+  flex-wrap: nowrap; }
   @media (max-width: 769px) {
     .grid__row {
       margin-bottom: 1.875em; } }
@@ -549,11 +524,12 @@ ul {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-content: stretch;
-  align-self: stretch;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
   padding: 0.625em; }
+  @media (max-width: 769px) {
+    [class^="grid__col--"] {
+      align-items: center; } }
   @media (min-width: 769px) {
     [class^="grid__col--"] {
       border-radius: 8px; } }
@@ -563,7 +539,8 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start; } }
+    justify-content: flex-start;
+    padding-right: 40%; } }
 @media (max-width: 769px) {
   .grid__col--7 {
     width: 100%; } }
@@ -584,6 +561,31 @@ ul {
     background-color: #78C0AB; }
   .theme__colors.grid__col--12 {
     background-color: #7FD079; }
+
+@media (min-width: 769px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end; } }
+@media (max-width: 769px) {
+  .nav__items {
+    margin: 20px; } }
+@media (min-width: 769px) {
+  .nav__items {
+    margin-left: 12px; } }
+@media (max-width: 769px) {
+  .nav__items__links {
+    padding: 10px 20px; } }
+@media (min-width: 769px) {
+  .nav__items__links {
+    padding: 10px; } }
+
+@media (min-width: 769px) {
+  .grid__col--9 .centered, .grid__col--9 .container, .grid__col--9 .img, .grid__col--9 .img--frame, .grid__col--9 .img--avatar, .grid__col--9 .img--logo {
+    margin-right: 0;
+    margin-top: auto;
+    margin-bottom: auto; } }
 
 .btn--default {
   background-color: #47DDFE; }
@@ -615,7 +617,6 @@ ul {
 .form__label--hidden {
   display: none; }
 .form__input {
-  display: block;
   padding: 10px;
   width: 100%;
   outline: 0;
@@ -628,16 +629,8 @@ ul {
   border-radius: 5px; }
   .form__input:focus {
     border-bottom-color: #1ae3ae; }
-  @media (min-width: 769px) {
-    .form__input {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto; } }
 .form [class^="btn--"] {
   margin-top: 1em; }
-  @media (min-width: 769px) {
-    .form [class^="btn--"] {
-      width: 40%; } }
 .form .img--avatar {
   max-width: 40%;
   margin-bottom: 18px; }
@@ -646,16 +639,10 @@ ul {
   align-self: center; }
 .img--avatar {
   align-self: center; }
-
 @media (max-width: 769px) {
-  .site-logo {
-    width: 35%;
+  .img--logo {
     margin-top: 10px;
     margin-bottom: 20px; } }
-@media (min-width: 769px) {
-  .site-logo {
-    width: 50%;
-    float: left; } }
 
 .blockquote {
   font-weight: 700;
@@ -667,10 +654,6 @@ ul {
   @media (min-width: 769px) {
     .blockquote {
       margin-top: 1.875em; } }
-
-.footer {
-  content: '';
-  margin-top: 50px; }
 
 .headline--primary {
   margin-top: 0;
@@ -715,11 +698,7 @@ ul {
   color: #fff;
   background-color: #61EDC8; }
 
-.panel {
-  padding-top: 1.875em;
-  padding-bottom: 1.25em; }
-
-.panel--padded, .panel--padded--centered {
+.container .grid__row:nth-child(1) {
   padding-top: 1.875em; }
 
 [class^="btn--"] {
@@ -734,7 +713,7 @@ ul {
   [class^="btn--"]:active {
     opacity: initial; }
 
-.img, .img--frame, .img--avatar {
+.img, .img--frame, .img--avatar, .img--logo {
   display: inline-block;
   max-width: 100%; }
 

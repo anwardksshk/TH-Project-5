@@ -10,17 +10,13 @@
 		align-self: center;
 	}
 	
-}
-
-.site-logo	{
-	@include mq('mobile')	{
-		width: 35%;
-		margin-top: 10px;
-		margin-bottom: 20px;
-	}
-	@include mq('desktop')	{
-		width: 50%;
-		float: left;
+	@include m(logo)	{
+		@extend %img;
+		
+		@include mq('mobile')	{
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
 	}
 	
 }

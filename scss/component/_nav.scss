@@ -2,11 +2,11 @@
 	@include mq('desktop')	{
 		@include flexbox()	{
 			justify-content: flex-end;
-			align-content: center;
 		};
 	}
 	
 	@include e(items)	{
+		
 		@include mq('mobile')	{
 			margin: 20px;
 		}
@@ -37,4 +37,13 @@
 
 .selected	{
 	@extend %nav_items_active;
+}
+
+.grid__col--9 .centered	{ //for navigation
+		@include mq('desktop'){
+			margin-right: 0;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+		
 }

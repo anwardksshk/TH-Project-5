@@ -9,16 +9,19 @@
     @include e(row) {
 		margin-bottom: em(12px);
         @include flexbox(column)    {
-           align-items: center;
+			
         };
 		@include mq('mobile') {
 			margin-bottom: em(30px);
 		}
         @include mq('desktop') {
 			@include flexbox($f-direction: row)	{
-				justify-content: space-between;
+			justify-content: space-between;
 			};
         }
+		.container &:nth-child(1)	{
+			@extend %panel-padding;
+		}
     }
 	
 	@include e(col){
@@ -42,9 +45,10 @@
 //Column Styles
 [class^="grid__col--"] {
 	@include flexbox(column)	{
-		align-content: stretch;
+		@include	mq('mobile')	{
+			align-items: center;	//the centered element can be seen clear in the img--logo
+		}
 	};
-	align-self: stretch;
 	margin-top: em(4px);
 	margin-bottom: em(4px);
 	padding: em(10px);
@@ -60,6 +64,7 @@
 		@include mq('desktop'){
 			@include flexbox(row)	{
 				justify-content: flex-start;
+				padding-right: 40%;
 			};
 		}
 	}
